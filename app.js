@@ -1,5 +1,14 @@
 
- 
+ /*U ovom fajlu se nalazi sav js kod koji je koriscen za izradu kalkulatora
+ Bitno je odma na pocetku razumeti da je trenutni operator broj koji je odabran za neku od operacija u kalkulatoru
+ a prethodni onaj koji je unet pre njega u kalkulatoru (npr unosimo 7 to je trenutni pa u nesemo + 8 i 
+ tada je 8 trenutni a 7 prethodni operator pa odabranu operaciju u ovom slucaju sabiranje racunamo kao prethodni plus trenutni odnosno 7+8)*/
+
+/*Takodje da vas ne buni prethodniTekst i trenutniTekst se odnose na ono sto mi unosimo konkretno sa tastature i povezuje se sa html-om
+pa se kroz jednu od narednih funkcija prevodi u prethodniOperator i trenutniOperator a oba se odnose na brojeve koje unosimo u kalkulator*/
+
+/*Vas zadatak je da u funkciji racunanje obezbedite izvrsenje odabrane operacije nad prethodnim i trenutnim operatorom*/
+/*Najbitnije je da prodjete kroz kod detlajno da biste razumeli sta je sta, a sam zadatak je jednostavan hint je da se koristi switch ili if*/
 
 
 const brojeviButtons = document.querySelectorAll(".broj"); //vracamo listu svih dugmica koji se odnose na brojeve (1,2,3,4..)
@@ -66,7 +75,7 @@ class Kalkulator{
         const preth = parseFloat(this.prethodniOperator)
         const tren = parseFloat(this.trenutniOperator)
         if(isNaN(preth) || isNaN(tren)) return;
-        /*IZRACUNATI 'RACUN' U ZAVISNOSTI OD ODABRANE OPERACIJE (THIS.OPERATION) HINT KORISITI NEKU OD PETLJI*/ 
+        /*IZRACUNATI 'RACUN' U ZAVISNOSTI OD ODABRANE OPERACIJE (THIS.OPERATION)*/ 
         
         this.trenutniOperator=racun;
         this.operation=undefined;
